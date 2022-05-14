@@ -14,7 +14,7 @@ df.head(5)
 print("The last 10 rows of the dataframe\n")
 df.tail(10)
 
-# create and adding headers list
+# create and add headers list
 headers = ["symboling","normalized-losses","make","fuel-type","aspiration", "num-of-doors","body-style",
          "drive-wheels","engine-location","wheel-base", "length","width","height","curb-weight","engine-type",
          "num-of-cylinders", "engine-size","fuel-system","bore","stroke","compression-ratio","horsepower",
