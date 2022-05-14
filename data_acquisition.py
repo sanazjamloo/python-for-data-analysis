@@ -48,4 +48,42 @@ df.describe()
 df.describe(include = "all")
 
 # look at the info of "df"
+# This method prints information about a DataFrame including the index dtype and columns, non-null values and memory usage.
 df.info()
+
+# Access relational database with Python
+
+# DB-API is Python’s standard API used for accessing databases. It allows you to write a single program that works with multiple kinds of relational databases instead of writing a separate program for each one.
+# The two main concepts in the Python DB-API are:
+
+#1) Connection objects used for
+
+# Connect to a database
+# Manage your transactions.
+
+# Following are a few connection methods:
+
+# cursor(): This method returns a new cursor object using the connection.
+# commit(): This method is used to commit any pending transaction to the database.
+# rollback(): This method causes the database to roll back to the start of any pending transaction.
+# close(): This method is used to close a database connection.
+
+# 2) Query objects are used to run queries.
+
+# This is a python application that uses the DB-API to query a database.
+
+from dbmodule import connect
+
+# Create connection object
+connection = connect('databasename', 'username', 'pswd')
+
+# Create a cursor object
+cursor = connection.cursor()
+
+# Run queries
+cursor.execute('select * from mytable')
+results = cursor.fetchall()
+
+# Free resources
+cursor.close()
+connection.close()
